@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Mali:wght@400;500;600;700&display=swap");
+
+:root {
+  --mainDark: #242325;
+  --mainGreen: #61e786;
+  --mainWhite: #fff;
+  --mainGrey: #e9e9e9;
+  --mainTrans: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: "Mali", cursive;
+  background-color: var(--mainWhite);
+  color: var(--mainDark);
+}
+/* global */
+.text-green {
+  color: var(--mainGreen);
+}
+
+.text-slant {
+  font-family: "Caveat", cursive;
+}
+
+.green-btn {
+  color: var(--mainGreen);
+  border: 0.1rem solid var(--mainGreen);
+  background: transparent;
+}
+
+.green-btn:hover {
+  color: var(--mainWhite);
+  background: var(--mainGreen);
+}
+
+.title-underline {
+  width: 12rem;
+  height: 0.3rem;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 2rem;
+}
+
+.title-underline-center {
+  position: absolute;
+  height: 0.6rem;
+  background: var(--mainGreen);
+  width: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+}
+
+.blockquote {
+  border-left: 0.5rem solid var(--mainGreen);
+}
+
+/***************** navbar  *********************/
+.navbar {
+  background: var(--mainDark) !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.nav-link {
+  color: var(--mainWhite) !important;
+}
+
+.nav-link:hover {
+  color: var(--mainGrey) !important;
+  color: var(--mainGrey) !important;
+}
+
+.phone-icon {
+  color: var(--mainGreen);
+  border: 0.1rem solid var(--mainGreen);
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+/***************** banner  *********************/
+.banner-info {
+  background: var(--mainGrey);
+  min-height: calc(100vh - 101px);
+  position: relative;
+}
+
+.banner-info-footer {
+  background: var(--mainGreen);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.banner-img {
+  min-height: calc(100vh - 101px);
+  background: url("../img/bannerBcg.jpeg") center/cover no-repeat fixed;
+  position: relative;
+}
+
+.banner-img-footer {
+  background: var(--mainDark);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 104px;
+  display: flex;
+  align-items: center;
+}
+/***************** about  *********************/
+.img-container {
+  position: relative;
+}
+
+.featured-icons {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.featured-icon-left {
+  background: var(--mainDark);
+  padding: 0.5rem;
+  display: inline-block;
+  color: var(--mainWhite);
+}
+
+.featured-icon-right {
+  background: var(--mainGreen);
+  padding: 0.5rem;
+  display: inline-block;
+  color: var(--mainWhite);
+}
+/***************** about  *********************/
+.featured {
+  background: var(--mainGrey);
+}
+/***************** contact  *********************/
+.contact {
+  background: var(--mainGreen);
+  color: var(--mainWhite);
+}
+
+.contact-btn {
+  background: transparent;
+  border: 0.1rem solid var(--mainWhite);
+  color: var(--mainWhite);
+}
+
+.contact-btn:hover {
+  background: var(--mainWhite);
+  color: var(--mainGreen);
+}
+/***************** services  *********************/
+.services {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/bannerBcg.jpeg") center/cover fixed no-repeat;
+}
+
+.services-info-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--mainGreen);
+  color: var(--mainWhite) !important;
+  margin-bottom: 0;
+  text-decoration: none;
+  text-align: center;
+}
+
+.services-info-text:hover {
+  color: var(--mainDark) !important;
+}
+
+.service-icon {
+  font-size: 2rem;
+  color: var(--mainGreen);
+  padding: 0.5rem;
+  border: 0.1rem solid var(--mainGreen);
+  margin-right: 1rem;
+  align-self: center;
+}
+
+.service-icon:hover {
+  background: var(--mainGreen);
+  color: var(--mainGrey);
+}
+
+.service-link {
+  text-decoration: none;
+}
+
+.service-link:hover {
+  color: var(--mainWhite);
+}
+/***************** gallery  *********************/
+.gallery-btn:hover {
+  background: var(--mainGreen);
+  color: var(--mainWhite);
+}
+
+.gallery-img-container {
+  position: relative;
+  transition: all 1s linear;
+  overflow: hidden;
+}
+
+.gallery-img-container:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.gallery-img {
+  transition: all 1s linear;
+}
+
+.gallery-img-container:hover .gallery-img {
+  opacity: 0.3;
+}
+
+.gallery-info {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  background: var(--mainGreen);
+  text-decoration: none;
+  color: var(--mainWhite);
+  transition: all 0.3s linear;
+}
+
+.gallery-info:hover {
+  text-decoration: none;
+  color: var(--mainDark);
+}
+
+.gallery-img-container:hover .gallery-info {
+  transform: translate(-50%, 0);
+}
+
+.gallery-icon {
+  position: absolute;
+  color: var(--mainWhite);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.gallery-img-container:hover .gallery-icon {
+  opacity: 1;
+}
+/***************** tour  *********************/
+.tour {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/bannerBcg.jpeg") center/cover fixed no-repeat;
+}
+
+.tour-icon {
+  color: var(--mainGreen);
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: var(--mainWhite);
+  border-radius: 30%;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: var(--mainTrans);
+}
+
+.tour-icon:hover {
+  background: var(--mainGreen);
+  color: var(--mainWhite);
+}
+/* footer */
+.footer {
+  background-color: var(--mainDark);
+}

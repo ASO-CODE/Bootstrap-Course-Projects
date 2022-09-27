@@ -1,0 +1,422 @@
+:root {
+  --mainPink: #d3325f;
+  --mainWhite: #c9c1ac;
+  --mainDark: #242424;
+  --mainTrans1: all 1s ease-in-out;
+}
+
+body {
+  background: url(../img/body-bcg.jpeg) center/cover fixed no-repeat;
+  font-family: "Akaya Telivigala", cursive;
+  color: var(--mainWhite);
+}
+
+.primary-color {
+  color: var(--mainPink);
+}
+
+.info {
+  background: var(--mainWhite);
+}
+
+.info h2 {
+  word-spacing: 0.6rem;
+}
+
+.info a {
+  transition: var(--mainTrans1);
+}
+
+.info a:hover {
+  color: var(--mainDark);
+}
+/********************************* header *************************************/
+#header {
+  min-height: calc(100vh - 94px);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../img/banner-bcg.jpeg) center/cover no-repeat fixed;
+}
+
+.height-90 {
+  min-height: calc(100vh - 94px);
+}
+
+.banner h1 {
+  border-top: 6px dotted var(--mainWhite);
+  border-bottom: 6px dotted var(--mainWhite);
+  animation: fromLeft 2s 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.main-btn {
+  color: var(--mainPink);
+  font-size: 2rem;
+  border: 2px solid var(--mainPink);
+  transition: var(--mainTrans1);
+}
+
+.main-btn:hover {
+  color: var(--mainDark);
+  border: 2px solid var(--mainWhite);
+  background: var(--mainWhite);
+}
+
+.sushi-btn {
+  animation: fromRight 2s 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes fromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.header-link {
+  display: inline-block;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  background: var(--mainWhite);
+  border-radius: 10px;
+  transition: var(--mainTrans1);
+  animation: fromBottom 4s 0.3s infinite forwards;
+}
+
+.header-link:hover {
+  color: var(--mainDark);
+}
+
+@keyframes fromBottom {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+/********************************* navbar *************************************/
+.navbar{
+  background: var(--mainWhite);
+  padding: 20px 20px;
+  transition: var(--mainTrans1);
+
+}
+
+.navbar-background{
+  padding: 5px 20px;
+}
+
+.navbar-brand{
+  font-size: 30px;
+  transition: var(--mainTrans1);
+}
+
+.navbar-brand:hover{
+  color: var(--mainDark);
+}
+
+.nav-link{
+  color: var(--mainDark);
+  text-decoration: none;
+  transition: var(--mainTrans1);
+  font-size: 23px;
+}
+
+.nav-link:hover{
+  color: var(--mainPink);
+}
+
+.nav-btn{
+  background: transparent;
+  color: var(--mainPink);
+  border: 2px solid var(--mainPink);
+  font-size: 23px;
+  transition: var(--mainTrans1);
+}
+
+.nav-btn:hover{
+  color: var(--mainDark);
+  border: 2px solid var(--mainDark);
+  transform: rotate(10deg);
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  height: 0.125rem;
+  width: 2rem;
+  background: var(--mainPink);
+  margin: 0.4rem 0;
+  transition: transform 0.3s ease;
+}
+
+.turn .bar1 {
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.turn .bar2 {
+  opacity: 0;
+}
+
+.turn .bar3 {
+  transform: rotate(45deg) translate(-7px, -8px);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  border-bottom: 0.1rem solid var(--mainWhite);
+}
+
+.nav-active {
+  border-bottom: 0.1rem solid var(--mainYellow);
+}
+
+/********************************* menu items *************************************/
+.item-container {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+  transition: var(--mainTrans1);
+}
+
+.item-img {
+  transition: var(--mainTrans1);
+}
+
+.item-container:hover .item-img {
+  transform: scale(1.2);
+  opacity: 0.5;
+}
+
+.item-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--mainPink);
+  font-size: 2rem;
+  border-top: 3px solid var(--mainPink);
+  border-bottom: 3px solid var(--mainPink);
+  transition: var(--mainTrans1);
+  opacity: 0;
+}
+
+.item-container:hover .item-link {
+  opacity: 1;
+}
+
+.item-link:hover {
+  color: var(--mainWhite);
+  border: 3px solid var(--mainWhite);
+  background: var(--mainWhite);
+  color: var(--mainDark);
+}
+
+.item-container:hover {
+  outline: 10px solid var(--mainPink);
+  outline-offset: 0.8rem;
+}
+/********************************* menu *************************************/
+#menu {
+  background: linear-gradient(
+      rgba(225, 225, 225, 0.6),
+      rgba(225, 225, 225, 0.6)
+    ),
+    url("../img/banner-bcg.jpeg") center/cover no-repeat fixed;
+}
+
+.special {
+  border: 3px solid var(--mainPink);
+  position: relative;
+}
+
+.special-text {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  background: var(--mainPink);
+  padding: 0 0.4rem;
+}
+/********************************* about *************************************/
+.about-pictures {
+  position: relative;
+}
+
+.about-image {
+  position: absolute;
+  width: 150px;
+  transition: var(--mainTrans1);
+  opacity: 0.9;
+}
+
+.img-1 {
+  left: 0%;
+  top: 0%;
+}
+
+.img-2 {
+  left: 20%;
+  top: 20%;
+  z-index: 10;
+}
+
+.img-3 {
+  left: 40%;
+  top: 45%;
+  z-index: 20;
+}
+
+.img-4 {
+  left: 40%;
+  top: 0%;
+}
+
+.img-5 {
+  left: 0%;
+  top: 45%;
+}
+
+.about-image:hover {
+  outline: 10px solid var(--mainPink);
+  outline-offset: 0.8rem;
+  transform: scale(1.3) rotate(20deg);
+  z-index: 30;
+  opacity: 1;
+}
+
+.about-pictures:hover .about-image:not(:hover) {
+  opacity: 0.5;
+}
+/********************************* review *************************************/
+.review-item {
+  background: rgba(225, 225, 225, 0.7);
+  clip-path: polygon(5% 0, 100% 0, 90% 100%, 0 100%);
+}
+
+.review-img {
+  width: 150px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background: transparent !important;
+  border: none !important;
+  font-size: 4.5rem !important;
+  color: var(--mainPink) !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  font-size: 4.5rem !important;
+  background-color: var(--mainPink) !important;
+}
+/********************************* team *************************************/
+.card-img-top {
+  height: 20rem;
+  object-fit: cover;
+}
+
+.team-icons {
+  color: var(--mainPink);
+  transition: var(--mainTrans1);
+}
+
+.team-icons a {
+  color: var(--mainPink);
+  font-size: 2rem;
+}
+
+.team-icons a:hover {
+  color: var(--mainDark);
+  transform: translateY(-5px);
+}
+/********************************* contact *************************************/
+.height-60 {
+  min-height: 60vh;
+}
+
+#contact .card {
+  background: rgba(0, 0, 0, 0.5);
+  transition: var(--mainTrans1);
+}
+
+#contact .card:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#contact .card-header {
+  color: var(--mainPink);
+}
+
+#contact .input-group-text {
+  background: var(--mainPink);
+  border-color: var(--mainPink);
+  color: var(--mainWhite);
+}
+
+#contact .card input {
+  color: #606060;
+}
+
+#contact .card input::placeholder {
+  color: #606060;
+}
+
+.contact-btn {
+  color: var(--mainPink);
+  border-color: var(--mainPink);
+  background: transparent;
+  transition: var(--mainTrans1);
+}
+
+.contact-btn:hover {
+  background: var(--mainWhite);
+  color: var(--mainPink);
+  border-color: var(--mainWhite);
+}
+/********************************* footer *************************************/
+#back-to-top {
+  background: var(--mainWhite);
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.scrollTop {
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+}
